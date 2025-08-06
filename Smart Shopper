@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int cost1=scan.nextInt();
+        int quan1=scan.nextInt();
+        int cost2=scan.nextInt();
+        int quan2=scan.nextInt();
+        int cost3=scan.nextInt();  
+        int quan3=scan.nextInt();
+        int budget=scan.nextInt(); 
+        double total=((cost1*quan1)+(cost2*quan2)+(cost3*quan3));
+        System.out.printf( "Total (Before Tax): %.2f\n",total);
+        double totalbill=total+(total*0.10);
+        System.out.printf("Total (After Tax): %.2f\n",totalbill);
+        if(totalbill<=budget){
+            System.out.println("Within Budget");
+        }
+        else
+            System.out.println("Over Budget");
+                          
+         }
+}
