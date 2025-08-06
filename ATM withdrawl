@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int amt=scan.nextInt();
+        scan.nextLine();
+        String status=scan.nextLine();
+        if(status.equals("available")){
+        if((amt%100)==0){
+            System.out.println("Amount " +amt+ " can be withdrawn");
+    }
+            else{
+                System.out.println("Enter amount in multiples of 500");
+            }
+            }
+    else{
+        if((amt%500)==0){
+            System.out.println("Amount " +amt+ " can be withdrawn");
+        }
+        else{
+            System.out.println("Enter amount in multiples of 500");
+        }
+    }
+    }
+}
