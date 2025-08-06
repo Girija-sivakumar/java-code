@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        n = Math.abs(n);
+        int firstdigit = n;
+        int lastdigit = n%10;
+        while(firstdigit>=10){
+            firstdigit = firstdigit/10;
+        }
+        int sum = firstdigit+lastdigit;
+        System.out.println(sum);
+    }
+}
